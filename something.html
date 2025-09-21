@@ -8,10 +8,11 @@
      
      <button onclick="
 const randomNumber = Math.random();
-         
+         //const would be used most of the time, let is to change values later, dont use const in that case!
     let computerMove = '';
     // Math.random() picks a random number between 0 and 1
-         
+
+         // scope is created after if statement o line 16, cant acces the variables set above if inside scope, it would be treated like new
     if (randomNumber >=0 && randomNumber < 1 / 3){
     computerMove = 'rock';
     } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3){
@@ -31,7 +32,7 @@ computerMove = 'scissors';
     }
          
     alert(`You picked rock, computer picked ${computerMove}, ${result}`) 
-         
+         // ${} has value
     // using template string, wont pick rock evrey time
     ">Rock</button>
          
@@ -67,7 +68,7 @@ computerMove = 'scissors';
      
      <button onclick="
                      const randomNumber = Math.random();
-             
+             // string empty, we will use variable later and enter a string
         let computerMove = '';
         // Math.random() picks a random number between 0 and 1
              
