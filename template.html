@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Button</title>
+</head>
+<body>
+    <h1>Click the button to open a link</h1>
 
+    <!-- The HTML button element -->
+    <button id="openLinkButton">SPACE THING</button>
+<script>
+  // Function to open the link
+function openInBlankAndRedirect() {
+    const targetUrl = 'https://somethingnew.unleashedvr.com';
+
+    // 2. Open a new window with about:blank
+    const newWindow = window.open('about:blank', '_blank');
+
+    // 3. Check if the new window was successfully created
+    if (newWindow) {
+        // 4. Redirect the new window to your target URL
+        newWindow.location.href = targetUrl;
+    } else {
+        // Fallback for browsers that block pop-ups
+        alert('Please allow pop-ups for this site to open the link.');
+    }
+}
+
+// Get the button element from the HTML
+const button = document.getElementById('openLinkButton');
+
+// Attach the function to the button's click event
+button.addEventListener('click', openInBlankAndRedirect);
+</script>
+</body>
+</html>
