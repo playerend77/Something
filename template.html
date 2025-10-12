@@ -8,23 +8,20 @@
 <body>
     <h1>Click the button to open a link</h1>
 
-    <!-- The HTML button element -->
-    <button id="openLinkButton">SPACE THING</button>
+   <center>
+<button onclick="openGame()" style="background-color: #ff9900; color: #fff; border: 1; border-color: #ff9900; vertical-align: center; font-size: 26px; width:100%; cursor: pointer; border-radius: 10px;"> Play in Fullscreen </button>
 <script>
-  function redirectCurrentTab(targetUrl) {
-    window.location.href = 'about:blank';
-    setTimeout(() => {
-        window.location.href = targetUrl;
-    }, 50); // A small delay to help ensure the blank page loads
+function openGame() {
+	var win = window.open ()
+	var url = "URL BRUH"
+	var iframe = win.document.createElement('iframe')
+	iframe.style.width = "100%"
+	iframe.style.height = "100%"
+	iframe.style.border = "none"
+	iframe.src = url
+	win.document.body.appendChild(iframe)
 }
-
-const button = document.getElementById('openLinkButton');
-
-button.addEventListener('click', () => {
-    const targetUrl = 'https://https://shinebahadur.unleashedvr.com'; // CHANGE THIS TO YOUR LINK
-    redirectCurrentTab(targetUrl);
-});
-
 </script>
+</center>
 </body>
 </html>
