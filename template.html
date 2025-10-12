@@ -11,28 +11,20 @@
     <!-- The HTML button element -->
     <button id="openLinkButton">SPACE THING</button>
 <script>
-  // Function to open the link
-function openInBlankAndRedirect() {
-    const targetUrl = 'https://somethingnew.unleashedvr.com';
-
-    // 2. Open a new window with about:blank
-    const newWindow = window.open('about:blank', '_blank');
-
-    // 3. Check if the new window was successfully created
-    if (newWindow) {
-        // 4. Redirect the new window to your target URL
-        newWindow.location.href = targetUrl;
-    } else {
-        // Fallback for browsers that block pop-ups
-        alert('Please allow pop-ups for this site to open the link.');
-    }
+  function redirectCurrentTab(targetUrl) {
+    window.location.href = 'about:blank';
+    setTimeout(() => {
+        window.location.href = targetUrl;
+    }, 50); // A small delay to help ensure the blank page loads
 }
 
-// Get the button element from the HTML
 const button = document.getElementById('openLinkButton');
 
-// Attach the function to the button's click event
-button.addEventListener('click', openInBlankAndRedirect);
+button.addEventListener('click', () => {
+    const targetUrl = 'https://https://somethingnew.unleashedvr.com'; // CHANGE THIS TO YOUR LINK
+    redirectCurrentTab(targetUrl);
+});
+
 </script>
 </body>
 </html>
